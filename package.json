@@ -9,8 +9,30 @@
   "keywords": [],
   "author": "Lukas Konarik",
   "license": "ISC",
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "postcss-nested": {},
+      "cssnano": {},
+      "autoprefixer": {
+        "browsers": [
+          ">1%",
+          "last 2 versions",
+          "not ie < 11"
+        ]
+      }
+    }
+  },
   "dependencies": {
+    "colors.css": "^3.0.0",
+    "colours": "^0.6.0-2",
+    "mini": "^1.1.0",
     "mini.css": "^3.0.0",
+    "typography": "^0.16.17",
     "typography.css": "^0.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "postcss-nested": "^3.0.0"
   }
 }

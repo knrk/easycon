@@ -1,5 +1,6 @@
 :root {
     --major-text-color: #192C38;
+    --nav-hover-color: rgba(0, 0, 0, 0.4);
 
     --fore-color: #111;
     --secondary-fore-color: #444;

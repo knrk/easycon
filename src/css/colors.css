@@ -1,19 +1,17 @@
 :root {
-    --major-text-color: #192C38;
+    --major-text-color: rgba(25, 44, 56, 1);
+    --major-accent-text-color: #fff;
+    --minor-text-color: rgba(25, 44, 56, .6);
     --nav-hover-color: rgba(0, 0, 0, 0.4);
-
-    --fore-color: #111;
-    --secondary-fore-color: #444;
-    --back-color: #f8f8f8;
-    --secondary-back-color: #f0f0f0;
-    --blockquote-color: #f57c00;
-    --pre-color: #1565c0;
-    --border-color: #aaa;
-    --secondary-border-color: #ddd;
-    --heading-ratio: 1.19;
-    --universal-margin: 0.5rem;
-    --universal-padding: 0.5rem;
-    --universal-border-radius: 0.125rem;
-    --a-link-color: #0277bd;
-    --a-visited-color: #01579b;
+    --max-width: 1170px;
+    --header-height: 100px;
+    --header-border-color: #333;
+    --heading-bg-color: #49749B;
+    --emphasized-section-bg-color: #24435E;
+    --button-bg-color: #62C9DA;
+    --button-text-color: #fff;
+    --dots-bg-color: #D8D8D8;
+    --dots-active-bg-color: #7C7C7C;
+    --reveal-inactive-text-color: rgba(25, 44, 56, .5);
+    --reveal-active-text-color: rgba(25, 44, 56, 1);
 }

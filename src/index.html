@@ -16,7 +16,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/glide.core.min.css">
+        <link rel="stylesheet" href="./css/glide.theme.min.css">
         <script src="./js/particles.js"></script>
+        <script src="https://unpkg.com/@glidejs/glide"></script>
         <script src="./js/index.js"></script>
     </head>
     <body>
@@ -33,11 +36,11 @@
         <!-- banner -->
         <main>
             <div class="boxes">
-                <a href="#" class="box iot"><span>Internet of Things</span></a>
-                <a href="#" class="box webapps"><span>Webové Aplikace</span></a>
-                <a href="#" class="box controlling"><span>Řídící<br>Systémy</span></a>
+                <a href="javascript:;" class="box iot"><span>Internet of Things</span></a>
+                <a href="javascript:;" class="box webapps"><span>Webové Aplikace</span></a>
+                <a href="javascript:;" class="box controlling"><span>Řídící<br>Systémy</span></a>
             </div>
-            <div class="content">
+            <div id="iot-content" class="content hidden">
                 <div class="deco-left"></div>
                 <div class="deco">
                     <img src="./img/logo-in-shape.svg"/>
@@ -45,13 +48,48 @@
                 <div class="deco-right"></div>
 
                 <div class="left">
-                    <h2><span>01</span>Webové<br>Aplikace</h2>
+                    <h2><span>01</span>Internet of<br>Things</h2>
+                </div>
+                <div class="middle deco-middle"></div>
+                <div class="right">
+                    <p>Umožníme vám mít přehled o čemkoliv. Nabízíme vám jednoduché připojení a zároveň všechny technologie v jedné aplikaci ve sjednoceném zobrazení měřených dat.</p>
+                    <p>Vybereme pro Vás to nejlepší řešení. Používáme technologie <b>Sigfox</b>, <b>Wi-Fi</b>, <b>LoRa</b> a <b>NB-IoT</b>.</p>
+                    <p>Našimy zákazníky jsou například <b>Innogy</b> nebo <b>Pražská energetika</b>, která díky nám má přehled o výrobě energie ze solárních elektráren.</p>
+                    <a href="#" class="button transparent">Více informací <i class="icon arrow"></i></a>
+                </div>
+            </div>
+            <div id="webapps-content" class="content">
+                <div class="deco-left"></div>
+                <div class="deco">
+                    <img src="./img/logo-in-shape.svg"/>
+                </div>
+                <div class="deco-right"></div>
+
+                <div class="left">
+                    <h2><span>02</span>Webové<br>Aplikace</h2>
                 </div>
                 <div class="middle deco-middle"></div>
                 <div class="right">
                     <p>Webové aplikace od Easyconu umožní maximální uspokojení potřeb jak našich klientů, tak i jejich zákazníků</p>
                     <p>Nabízíme širokou nabídku aplikací od klasických webových stránek, přes <b>fakturační systémy</b> až po <b>platformy pro kryptoměny</b>.</p>
                     <p>Náš fakturační a objednávkový systém využívá například <b>MedicalNews</b>.</p>
+                    <a href="#" class="button transparent">Více informací <i class="icon arrow"></i></a>
+                </div>
+            </div>
+            <div id="controlling-content" class="content hidden">
+                <div class="deco-left"></div>
+                <div class="deco">
+                    <img src="./img/logo-in-shape.svg"/>
+                </div>
+                <div class="deco-right"></div>
+
+                <div class="left">
+                    <h2><span>03</span>Řídící<br>Systémy</h2>
+                </div>
+                <div class="middle deco-middle"></div>
+                <div class="right">
+                    <p>V rámci monitoringu klimatu se zabýváme jeho vyhodnocováním, zejména měřením CO2 a teploty ve veřejných budovách. Takto monitorujeme například vybrané přednáškové sály na VUT.</p>
+                    <p>Technologie se dá použít také ve venkovních prostorech.</p>
                     <a href="#" class="button transparent">Více informací <i class="icon arrow"></i></a>
                 </div>
             </div>
@@ -79,30 +117,35 @@
         </section>
         <article>
             <!-- webapps -->
-            <section id="webapps">
-                <div class="slider">
-                    <div class="gallery items-3">
-                        <div id="webapp-1" class="control-operator"></div>
-                        <div id="webapp-2" class="control-operator"></div>
-                        <div id="webapp-3" class="control-operator"></div>
-                        
-                        <figure class="item">
-                            <img src="img/slider-webapps-1.png" alt="">
-                        </figure>
-                        
-                        <figure class="item">
-                            <img src="img/slider-webapps-2.png" alt="">
-                        </figure>
-                        
-                        <figure class="item">
-                            <img src="img/slider-webapps-3.png" alt="">
-                        </figure>
-                        
-                        <div class="controls">
-                            <a href="#webapp-1" class="control-button">•</a>
-                            <a href="#webapp-2" class="control-button">•</a>
-                            <a href="#webapp-3" class="control-button">•</a>
-                        </div>
+            <section id="webapps">   
+                <div class="slider glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <figure class="item">
+                                    <img src="img/slider-webapps-1.png" alt="">
+                                </figure>
+                            </li>
+                            <li class="glide__slide">
+                                <figure class="item">
+                                    <img src="img/slider-webapps-2.png" alt="">
+                                </figure>
+                            </li>
+                            <li class="glide__slide">
+                                <figure class="item">
+                                    <img src="img/slider-webapps-3.png" alt="">
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#10094;</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#10095;</button>
+                    </div>
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
                     </div>
                 </div>
                 <div class="text">
@@ -153,49 +196,63 @@
                         <label for="energy-monitoring">
                             <h4><i class="icon x2 energy"></i>Monitoring spotřeby energií</h4>
                         </label>
-                        <div class="text">Some text</div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc dapibus tortor vel mi dapibus sollicitudin. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Morbi scelerisque luctus velit. Aliquam erat volutpat. Pellentesque ipsum. Aliquam ante. Duis condimentum augue id magna semper rutrum. Aliquam ornare wisi eu metus. Maecenas lorem.</p>
+                            <p>Vivamus porttitor turpis ac leo. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Nulla est. Et harum quidem rerum facilis est et expedita distinctio. Aliquam id dolor. Phasellus et lorem id felis nonummy placerat. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Proin mattis lacinia justo. Aenean id metus id velit ullamcorper pulvinar. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.</p>
+                        </div>
                     </li>
                     <li>
                         <input id="power-supply-monitoring" name="iot" type="radio" />
                         <label for="power-supply-monitoring">
                             <h4><i class="icon x2 power-supply"></i>Monitoring dodávky elektrické energie</h4>
                         </label>
-                        <div class="text">Some text</div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Morbi scelerisque luctus velit. Aliquam erat volutpat. Pellentesque ipsum. Aliquam ante. Duis condimentum augue id magna semper rutrum. Aliquam ornare wisi eu metus. Maecenas lorem.</p>
+                            <p>Vivamus porttitor turpis ac leo. Aliquam id dolor. Phasellus et lorem id felis nonummy placerat. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Proin mattis lacinia justo. Aenean id metus id velit ullamcorper pulvinar. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.</p>
+                        </div>
                     </li>
                     <li>
                         <input id="other-usecases" name="iot" type="radio" />
                         <label for="other-usecases">
                             <h4><i class="icon x2 other-usecases"></i>Další využití</h4>
                         </label>
-                        <div class="text">Some text</div>
+                        <div class="text">
+                            <p>Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Aliquam ornare wisi eu metus. Maecenas lorem.</p>
+                            <p>Vivamus porttitor turpis ac leo. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Morbi leo mi, nonummy eget tristique non, rhoncus non leo.</p>    
+                        </div>
                     </li>
                 </ul>
             </section>
             <!-- controlling -->
             <section id="controlling">
-                <div class="slider">
-                    <div class="gallery items-3">
-                        <div id="controlling-1" class="control-operator"></div>
-                        <div id="controlling-2" class="control-operator"></div>
-                        <div id="controlling-3" class="control-operator"></div>
-                        
-                        <figure class="item">
-                            <img src="img/slider-controlling-1.png" alt="">
-                        </figure>
-                        
-                        <figure class="item">
-                            <img src="img/slider-controlling-2.png" alt="">
-                        </figure>
-                        
-                        <figure class="item">
-                            <img src="img/slider-controlling-3.png" alt="">
-                        </figure>
-                        
-                        <div class="controls">
-                            <a href="#controlling-1" class="control-button">•</a>
-                            <a href="#controlling-2" class="control-button">•</a>
-                            <a href="#controlling-3" class="control-button">•</a>
-                        </div>
+                <div class="slider glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <figure class="item">
+                                    <img src="img/slider-controlling-1.png" alt="">
+                                </figure>
+                            </li>
+                            <li class="glide__slide">
+                                <figure class="item">
+                                    <img src="img/slider-controlling-2.png" alt="">
+                                </figure>
+                            </li>
+                            <li class="glide__slide">
+                                <figure class="item">
+                                    <img src="img/slider-controlling-3.png" alt="">
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#10094;</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#10095;</button>
+                    </div>
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
                     </div>
                 </div>
                 <div class="text">

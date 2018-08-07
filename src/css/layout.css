@@ -97,8 +97,9 @@ body > main {
     background-image: url(../img/header-bg.png);
     background-repeat: no-repeat;
     background-position: 0 -70px;
-    background-size: cover;
+    background-size: 1500px;
     min-height: 1023px;
+    height: 1050px;
     position: relative;
 
     .particles {
@@ -139,6 +140,7 @@ body > main {
             background-color: rgba(0, 0, 0, .2);
             width: 100%;
             min-height: 80px;
+            pointer-events: none;
         }
 
         &.iot {
@@ -253,6 +255,9 @@ body > main {
             font-weight: 400;
             letter-spacing: 1px;
         }
+    }
+    .content.hidden {
+        display: none;
     }
 }
 
@@ -457,6 +462,27 @@ body > footer {
     width: 584px;
     height: 584px;
     position: relative;
+
+    figure {
+        margin: 0;
+    }
+}
+.slider.glide {
+    width: 584px;
+    
+    .glide__bullets {
+        bottom: 0.25em;
+    }
+    .glide__bullet {
+        background-color: var(--dots-bg-color);
+        box-shadow: none;
+    }
+    .glide__bullet--active {
+        background-color: var(--dots-active-bg-color);
+    }
+    .glide__arrow {
+        border-radius: 50%;
+    }
 }
 .reveal {
     list-style-type: none;
@@ -604,10 +630,24 @@ body > footer {
 
     .text {
         min-height: 100%;
-        padding: 50px 0 0 50px;
         border-left: 1px solid;
         border-top: 1px solid;
+        border-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
         margin-left: -1px;
+        margin-top: -1px;
+
+        p {
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+
+        &:before {
+            display: block;
+            content: '';
+            height: 1px;
+            width: 100%;
+            border-top: 1px solid black;
+        }
     }
 }
 #webapps {
@@ -620,6 +660,7 @@ body > footer {
 
     .slider {
         margin-right: 50px;
+        width: 584px;
     }
 }
 #controlling {

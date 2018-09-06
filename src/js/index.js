@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     new Glide('#webapps .slider').mount();
-    new Glide('#controlling .slider').mount();
-
+    new Glide('#controlling .slider', {
+        autoplay: 10000,
+        hoverpause: true
+    }).mount();
 });

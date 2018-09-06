@@ -105,6 +105,7 @@ body > main {
         background-repeat: no-repeat;
         background-position: 0;
         background-size: 100%;
+        background-size: cover;
         top: 0; left: 0; right: 0; bottom: 0;
     }
 
@@ -237,7 +238,7 @@ body > main {
 
         h2 {
             font-family: 'Roboto Condensed';
-            font-size: 60px;
+            font-size: 340%;
             font-weight: 100;
             letter-spacing: 1px;  
             margin: 0;
@@ -245,7 +246,7 @@ body > main {
             line-height: 64px;
             display: flex;
             position: relative;
-            margin-right: 140px;
+            margin-right: 100px;
 
             span {
                 font-size: 16px;

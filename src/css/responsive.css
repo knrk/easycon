@@ -136,29 +136,30 @@
             margin-left: -30px;
 
             img {
-                width: 50%;
+                width: 215px;
             }
         }
     }
     body > main {
         min-height: 250px;
         height: 450px;
+        display: flex;  
 
         &:before {
             background-size: cover;
         }
 
         .boxes {
-            padding: 0px 30px;
+            padding: 0 0 0 30px;
+            margin: 40px 0;
             flex-direction: column;
             justify-content: space-evenly;
             display: flex;
             height: 100%;
 
             .box {
-                width: 250px;
-                height: auto;
-                margin: 0 auto;
+                width: 125px;
+                height: 125px;
 
                 span {
                     font-size: 16px;
@@ -168,10 +169,29 @@
             }
         }
 
-        #iot-content,
-        #webapps-content,
-        #controlling-content {
-            display: none;
+        .content {
+            display: flex;
+            padding: 40px 0;
+
+            p {
+                font-size: 12px;
+            }
+
+            .deco-left,
+            .deco,
+            .deco-right,
+            .left,
+            .deco-middle {
+                display: none;
+            }
+
+            .right {
+                padding: 10px 30px;
+
+                .button {
+                    font-size: 10px;
+                }
+            }
         }
     }
 
@@ -255,8 +275,7 @@
         .text {
             h3 {
                 color: var(--default-text-color);
-                text-align: center;
-                margin: 20px 0 10px 0;
+                margin: 20px 0 10px 10px;
             }
             p {
                 margin: 15px 30px;
@@ -272,10 +291,11 @@
     #iot {
         .slider {
             height: 400px;
+            width: 400px;
+            margin: 0 auto;
         }
         h3 {
-            margin: 0px 0 30px;
-            text-align: center;
+            margin: 0px 0 30px 10px;
         }
         p {
             margin: 15px 30px;
@@ -292,7 +312,6 @@
         .gallery {
             figure img {
                 max-height: 400px;
-                margin: 10px;
             }
             .controls {
                 display: none;
@@ -340,8 +359,7 @@
             }
         }
         h3 {
-            margin: 30px 0 30px;
-            text-align: center;
+            margin: 30px 0 30px 10px;
         }
         p {
             margin: 15px 30px;

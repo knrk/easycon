@@ -118,18 +118,22 @@
 }
 
 /* Mobile */
-@media all and (min-width: 325px) and (max-width: 959px) {
+@media all and (min-width: 320px) and (max-width: 959px) {
     body > header {
         border-bottom-width: 1px;
 
         nav {
+            justify-content: center;
+
             ul li a {
                 font-size: 14px;
+                padding: 0 12px;
             }
         }
 
         h1 {
             top: 66px;
+            right: 0px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -150,21 +154,20 @@
         }
 
         .boxes {
-            padding: 0 0 0 30px;
-            margin: 40px 0;
+            padding: 0 0 0 20px;
+            margin: 0;
             flex-direction: column;
             justify-content: space-evenly;
             display: flex;
             height: 100%;
 
             .box {
-                width: 125px;
-                height: 125px;
+                width: 100px;
+                height: 100px;
 
                 span {
-                    font-size: 16px;
+                    font-size: 12px;
                     min-height: 20px;
-                    padding: 20px 30px;
                 }
             }
         }
@@ -186,10 +189,16 @@
             }
 
             .right {
-                padding: 10px 30px;
+                padding: 10px 0px;
+
+                p {
+                    padding-left: 15px;
+                    padding-right: 10px;
+                }
 
                 .button {
                     font-size: 10px;
+                    margin-left: 0;
                 }
             }
         }
@@ -215,6 +224,7 @@
             address + div > p:first-child {
                 justify-content: flex-start;
                 margin-top: 20px;
+                white-space: nowrap;
             }
 
             h3 {
@@ -222,13 +232,32 @@
             }
 
             p {
-                font-size: 13px;
+                font-size: 12px;
                 margin-top: 0;
 
                 small {
                     font-size: 10px;
+                    line-height: 14px;
+                    
+                    b {
+                        margin-right: 0;
+                    }
+                }
+
+                i.icon {
+                    margin: 0;
+                    display: none;
                 }
             }
+        }
+    }
+
+    #about {
+        h3 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 13px;
         }
     }
 
@@ -261,12 +290,12 @@
         margin-top: 10px;
 
         .slider {
-            width: 400px;
-            height: 400px;
+            width: var(--mobile-min-breakpoint);
+            height: var(--mobile-min-breakpoint);
             margin: 0 auto;
 
             .glide__slide {
-                height: 400px;
+                height: var(--mobile-min-breakpoint);
             }
             .glide__slides {
                 margin: 0;
@@ -276,6 +305,7 @@
             h3 {
                 color: var(--default-text-color);
                 margin: 20px 0 10px 10px;
+                font-size: 40px;
             }
             p {
                 margin: 15px 30px;
@@ -290,12 +320,13 @@
 
     #iot {
         .slider {
-            height: 400px;
-            width: 400px;
+            height: var(--mobile-min-breakpoint);
+            width: var(--mobile-min-breakpoint);
             margin: 0 auto;
         }
         h3 {
             margin: 0px 0 30px 10px;
+            font-size: 40px;
         }
         p {
             margin: 15px 30px;
@@ -307,11 +338,11 @@
         }
         .button {
             font-size: 13px;
-            margin-bottom: 00px;
+            margin-bottom: 15px;
         }
         .gallery {
             figure img {
-                max-height: 400px;
+                max-height: var(--mobile-min-breakpoint);
             }
             .controls {
                 display: none;
@@ -332,14 +363,17 @@
 
         h4 {
             padding: 20px;
-            font-size: 30px;
-            line-height: 50px;
+            font-size: 24px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
         }
 
         div.text {
             position: initial;
 
             p {
+                font-size: 16px;
                 padding: 25px;
                 margin-bottom: 0;
             }
@@ -349,13 +383,13 @@
     #controlling {
         .slider,
         .slider.glide {
-            width: 400px;
-            height: 400px;
+            width: var(--mobile-min-breakpoint);
+            height: var(--mobile-min-breakpoint);
             margin: 0 auto;
 
             .glide__slide,
             .glide__slide img {
-                height: 400px;
+                height: var(--mobile-min-breakpoint);
             }
         }
         h3 {
@@ -375,7 +409,7 @@
         }
         .gallery {
             figure img {
-                max-height: 400px;
+                max-height: var(--mobile-min-breakpoint);
                 margin: 10px;
             }
             .controls {
@@ -393,7 +427,17 @@
     }
 
     .slider .item img {
-        width: 400px;
-        height: 400px;
+        width: var(--mobile-min-breakpoint);
+        height: var(--mobile-min-breakpoint);
+    }
+}
+
+@media all and (min-width: 320px) and (max-width: 500px) {
+body > header {
+        h1 {
+            picture img {
+                width: 80px;
+            }
+        }
     }
 }

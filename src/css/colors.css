@@ -1,4 +1,7 @@
 :root {
+    --mobile-min-breakpoint: 100%;
+    --mobile-max-breakpoint: 959px;
+
     --default-text-color: black;
     --major-text-color: rgba(25, 44, 56, 1);
     --major-accent-text-color: #fff;

@@ -446,22 +446,6 @@ body > footer {
     &.facebook {
         background-image: url(../img/facebook.svg);
     }
-    &.weather {
-        background-color: var(--reveal-inactive-text-color);
-        mask-image: url(../img/icon-weather.svg);
-    }
-    &.energy {
-        background-color: var(--reveal-inactive-text-color);
-        mask-image: url(../img/icon-gas-station.svg);
-    }
-    &.power-supply {
-        background-color: var(--reveal-inactive-text-color);
-        mask-image: url(../img/icon-factory.svg);
-    }
-    &.other-usecases {
-        background-color: var(--reveal-inactive-text-color);
-        mask-image: url(../img/icon-renewable-energy.svg);
-    }
     &.arrow {
         background-image: url(../img/arrow.svg);
     }
@@ -535,7 +519,7 @@ body > footer {
 
 .flag {
     display: flex;
-    width: 50px;
+    width: 22px;
     height: 100%;
     align-items: center;
     background-repeat: no-repeat;
@@ -568,7 +552,7 @@ body > footer {
     grid-template-columns: 1.2fr 2fr;
     align-items: center;
     padding: 70px 0;
-    margin: 0 40px;
+    margin: 0 auto;
 
     img {
         grid-row: 1 / 4;
@@ -660,7 +644,7 @@ body > footer {
         font-size: 40px;
         font-weight: 200;
         line-height: 40px;
-        padding: 45px;
+        padding: 45px 0;
         color: var(--reveal-inactive-text-color);
     }
     input[type=radio]:checked + label h4,
@@ -668,8 +652,20 @@ body > footer {
         color: var(--reveal-active-text-color);
         opacity: 1;
     }
-    input[type=radio]:checked + label h4 i {
-        background-color: var(--reveal-active-text-color);
+    input[type=radio]:checked + label svg {
+        fill: var(--reveal-active-text-color);
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+
+        svg {
+            padding-left: 45px; 
+            width: 48px;
+            height: 48px;     
+            fill: var(--reveal-inactive-text-color);      
+        }
     }
 
     ul li {

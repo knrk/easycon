@@ -24,7 +24,13 @@
     </head>
     <body>
         <header>
-            <h1><img src="img/logo.svg"/></h1>
+            <h1>
+                <picture>
+                    <source srcset="img/e-logo.svg" media="(max-width: 500px)">
+                    <source srcset="img/logo.svg">
+                    <img src="img/logo.svg" alt="EasyCon Logo">
+                </picture>
+            </h1>
             <nav>
                 <ul>
                     <li><a href="/" class="active">Home</a></li>
@@ -185,7 +191,10 @@
                     <li>
                         <input id="weather-monitoring" type="radio" name="iot" checked />
                         <label for="weather-monitoring">
-                            <h4><i class="icon x2 weather"></i>Monitoring klimatu</h4>
+                            <svg viewBox="0 0 48 48" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use xlink:href="./img/icon-weather.svg#weather-icon"></use>
+                            </svg>
+                            <h4>Monitoring klimatu</h4>
                         </label>
                         <div class="text">
                             <p>V rámci monitoringu klimatu se zabýváme jeho vyhodnocováním, zejména měřením CO2 a teploty ve veřejných budovách. Takto monitorujeme například vybrané přednáškové sály na VUT.</p>
@@ -195,7 +204,10 @@
                     <li>
                         <input id="energy-monitoring" name="iot" type="radio" />
                         <label for="energy-monitoring">
-                            <h4><i class="icon x2 energy"></i>Monitoring spotřeby energií</h4>
+                            <svg viewBox="0 0 48 48" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use xlink:href="./img/icon-gas-station.svg#gas-station-icon"></use>
+                            </svg>                            
+                            <h4>Monitoring spotřeby energií</h4>
                         </label>
                         <div class="text">
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc dapibus tortor vel mi dapibus sollicitudin. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Morbi scelerisque luctus velit. Aliquam erat volutpat. Pellentesque ipsum. Aliquam ante. Duis condimentum augue id magna semper rutrum. Aliquam ornare wisi eu metus. Maecenas lorem.</p>
@@ -205,7 +217,10 @@
                     <li>
                         <input id="power-supply-monitoring" name="iot" type="radio" />
                         <label for="power-supply-monitoring">
-                            <h4><i class="icon x2 power-supply"></i>Monitoring dodávky elektrické energie</h4>
+                            <svg viewBox="0 0 48 48" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use xlink:href="./img/icon-renewable-energy.svg#renewable-energy-icon"></use>
+                            </svg>
+                            <h4>Monitoring dodávky elektrické energie</h4>
                         </label>
                         <div class="text">
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Morbi scelerisque luctus velit. Aliquam erat volutpat. Pellentesque ipsum. Aliquam ante. Duis condimentum augue id magna semper rutrum. Aliquam ornare wisi eu metus. Maecenas lorem.</p>
@@ -215,7 +230,10 @@
                     <li>
                         <input id="other-usecases" name="iot" type="radio" />
                         <label for="other-usecases">
-                            <h4><i class="icon x2 other-usecases"></i>Další využití</h4>
+                            <svg viewBox="0 0 48 48" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use xlink:href="./img/icon-factory.svg#factory-icon"></use>
+                            </svg>
+                            <h4>Další využití</h4>
                         </label>
                         <div class="text">
                             <p>Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Aliquam ornare wisi eu metus. Maecenas lorem.</p>

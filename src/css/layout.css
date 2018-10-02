@@ -382,7 +382,7 @@ body > footer {
 
             i.icon {
                 margin-right: 0;
-                margin-left: 25px;
+                margin-top: 10px;
             }
         }
     }
@@ -421,6 +421,7 @@ body > footer {
     display: inline-block;
     width: 32px;
     height: 32px;
+    background-size: 32px;
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 25px;
@@ -445,6 +446,9 @@ body > footer {
     }
     &.facebook {
         background-image: url(../img/facebook.svg);
+    }
+    &.linkedin {
+        background-image: url(../img/linkedin.svg);
     }
     &.arrow {
         background-image: url(../img/arrow.svg);

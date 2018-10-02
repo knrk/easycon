@@ -216,6 +216,12 @@
     }
 
     body > footer {
+        position: static;
+
+        &:after {
+            display: none;
+        }
+
         .grid {
             padding: 20px;
             display: flex;
@@ -244,20 +250,34 @@
                     }
                 }
 
-                i.icon {
-                    margin: 0;
-                    display: none;
+                a {
+                    margin-left: 10px;
+                    i.icon {
+                        margin: 0;
+                        margin-top: 10px;
+                        width: 26px;
+                        background-size: 26px;
+                        padding-right: 0;
+                    }
                 }
             }
         }
     }
 
     #about {
+        padding: 10px 0px;
         h3 {
             font-size: 40px;
+            margin: 20px 0 10px 10px;
+            width: auto;
         }
         p {
             font-size: 13px;
+            margin: 15px 30px;
+            
+            &:last-child {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -415,14 +435,6 @@
             .controls {
                 display: none;
             }
-        }
-    }
-
-    #about {
-        padding: 10px 50px;
-
-        p:last-child {
-            margin-bottom: 50px;
         }
     }
 

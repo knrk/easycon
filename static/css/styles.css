@@ -819,7 +819,8 @@ body>footer>img {
     font-weight: 200;
     line-height: 40px;
     margin: 0;
-    padding: 45px 0
+    padding: 45px 0;
+    flex: 1;
 }
 
 #iot-more input[type=radio]:checked+label h4,
@@ -844,8 +845,9 @@ body>footer>img {
 #iot-more label svg {
     fill: var(--reveal-inactive-text-color);
     height: 48px;
+    width: 48px;
     padding-left: 45px;
-    width: 48px
+    padding-right: 45px;
 }
 
 #iot-more ul li {
@@ -1817,12 +1819,18 @@ body>footer>img {
         -ms-flex-align: center;
         -webkit-box-align: center;
         align-items: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
         font-size: 24px;
         line-height: 30px;
         padding: 20px
+    }
+
+    #iot-more label svg {
+        width: 32px;
+        max-width: 100%;
+        height: auto;
+        max-height: 32px;
+        padding: 20px;
+        padding-right: 0;
     }
 
     #iot-more div.text {
